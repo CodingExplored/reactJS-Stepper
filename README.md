@@ -1,44 +1,45 @@
-# CustomDropdown React Component
+# Stepper React Component
 
 ## Overview
 
-The `CustomDropdown` component is a flexible and customizable dropdown menu for React applications. It takes an array of text options and provides a dropdown interface for selecting one of those options.
+The `Stepper` component is a versatile component designed for creating multi-step forms or processes in React applications. It allows users to navigate through different steps or sections of a process, making complex tasks more manageable.
 
 ## Features
 
-- **Open/Close Toggle**: Opens and closes on button click.
-- **Dynamic Options**: Accepts an array of text options that will be displayed in the dropdown menu.
-- **Event Handling**: Calls a custom function (`onSelect`) whenever an option is selected.
+- **Step Navigation**: Users can easily move forward and backward between steps.
+- **Dynamic Content**: Each step can have its own unique content.
+- **Customizable**: You can define your own steps and content as needed.
+- **Simple Integration**: Easily integrate the `Stepper` component into your React projects.
 
 ## Installation
 
-1. Download both `CustomDropdown.js` and its associated `CustomDropdown.css` files.
+1. Download both `Stepper.js` and its associated `Stepper.css` files.
 2. Place them into your project's appropriate directory.
 
 ## Usage
 
-```jsx
-import CustomDropdown from './path/to/CustomDropdown';
+\```jsx
+import Stepper from './path/to/Stepper';
 
 function App() {
-  const options = ['Option 1', 'Option 2', 'Option 3'];
-
-  const handleSelect = (selectedOption) => {
-    console.log(`You selected ${selectedOption}`);
-  };
+  const steps = [
+    <Step1Component />,
+    <Step2Component />,
+    <Step3Component />,
+    // Add more steps as needed
+  ];
 
   return (
     <div>
-      <CustomDropdown options={options} onSelect={handleSelect} />
+      <Stepper steps={steps} />
     </div>
   );
 }
-```
+\```
 
 ## Props
 
-- `options` (Array): An array of text strings to be used as options in the dropdown.
-- `onSelect` (Function): A function to be called whenever an option is selected.
+- `steps` (Array): An array of React components, each representing a step in the process.
 
 ## License
 
