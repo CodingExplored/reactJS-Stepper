@@ -18,7 +18,7 @@ The `Stepper` component is a versatile component designed for creating multi-ste
 
 ## Usage
 
-\```jsx
+```jsx
 import Stepper from './path/to/Stepper';
 
 function App() {
@@ -35,7 +35,7 @@ function App() {
     </div>
   );
 }
-\```
+```
 
 ## Props
 
